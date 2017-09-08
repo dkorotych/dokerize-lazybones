@@ -26,7 +26,7 @@ docker run --rm dkorotych/lazybones list
 ```
 or create a [Maven] project
 ```docker
-docker run --rm --interactive --tty --volume $PWD:/home/lazybones/app dkorotych/lazybones create https://dl.bintray.com/dkorotych/lazybones-templates/maven-quickstart-template-1.3.2.zip
+docker run --rm --interactive --tty --volume $PWD:/home/lazybones/app dkorotych/lazybones create https://dl.bintray.com/dkorotych/lazybones-templates/maven-quickstart-template-1.3.2.zip .
 ```
 # Create an alias
 By creating an alias, you can use Lazybones in the same way as if you had installed everything on your computer.
