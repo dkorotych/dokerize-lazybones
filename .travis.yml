@@ -1,0 +1,9 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - readonly TAG='dkorotych/lazybones:travis'
+  - docker build -t $TAG .
+  - docker run --rm $TAG help
