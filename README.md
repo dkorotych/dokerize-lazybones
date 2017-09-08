@@ -7,18 +7,14 @@ Dockerized version of [Lazybones] project creation tool
 [![Docker Build Status](https://img.shields.io/docker/build/dkorotych/lazybones.svg)](https://hub.docker.com/r/dkorotych/lazybones)
 
 # What is [Lazybones]?
-Lazybones was born out of frustration that [Ratpack](https://ratpack.io)
-does not and will not have a command line tool that will bootstrap a project.
-It's a good decision for Ratpack, but I'm lazy and want tools to do the boring
-stuff for me.
+Lazybones was born out of frustration that [Ratpack](https://ratpack.io) does not and will not have a command line tool
+that will bootstrap a project. It's a good decision for Ratpack, but I'm lazy and want tools to do the boring stuff for me.
 
-The tool is very simple: it allows you to create a new project structure for
-any framework or library for which the tool has a template.
+The tool is very simple: it allows you to create a new project structure for any framework or library for which the tool has a template.
 
-The concept of Lazybones is very similar to [Maven] archetypes, and what [Yeoman](http://yeoman.io/)
-does for web applications. Lazybones also includes a subtemplates feature that
-resembles the behaviour of Yeoman's sub-generators, allowing you to generate optional
-extras (controllers, scaffolding etc.) inside a project.
+The concept of Lazybones is very similar to [Maven] archetypes, and what [Yeoman](http://yeoman.io/) does for web
+applications. Lazybones also includes a subtemplates feature that resembles the behaviour of Yeoman's sub-generators,
+allowing you to generate optional extras (controllers, scaffolding etc.) inside a project.
 
 # How to use this image
 You can run a Lazybones by using the Docker image directly, passing a Lazybones command to ```docker run```.
