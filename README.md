@@ -1,7 +1,7 @@
 # dokerize-lazybones
 Dockerized version of [Lazybones] project creation tool
 
-[![Build Status](https://travis-ci.org/dkorotych/dokerize-lazybones.svg?branch=0.8.3-jre7)](https://travis-ci.org/dkorotych/dokerize-lazybones)
+[![Build Status](https://travis-ci.org/dkorotych/dokerize-lazybones.svg?branch=0.8.1-jre7)](https://travis-ci.org/dkorotych/dokerize-lazybones)
 [![license](https://img.shields.io/github/license/dkorotych/dokerize-lazybones.svg)](https://github.com/dkorotych/dokerize-lazybones.git)
 [![Docker Automated build](https://img.shields.io/docker/automated/dkorotych/lazybones.svg)](https://hub.docker.com/r/dkorotych/lazybones)
 [![Docker Build Status](https://img.shields.io/docker/build/dkorotych/lazybones.svg)](https://hub.docker.com/r/dkorotych/lazybones)
@@ -20,11 +20,11 @@ allowing you to generate optional extras (controllers, scaffolding etc.) inside 
 You can run a Lazybones by using the Docker image directly, passing a Lazybones command to ```docker run```.
 For example, view list of standard project templates 
 ```docker
-docker run --rm dkorotych/lazybones:0.8.3-jre7 list
+docker run --rm dkorotych/lazybones:0.8.1-jre7 list
 ```
 or create a [Maven] project
 ```docker
-docker run --rm --interactive --tty --volume $PWD:/home/lazybones/app dkorotych/lazybones:0.8.3-jre7 create https://dl.bintray.com/dkorotych/lazybones-templates/maven-quickstart-template-1.3.2.zip .
+docker run --rm --interactive --tty --volume $PWD:/home/lazybones/app dkorotych/lazybones:0.8.1-jre7 create https://dl.bintray.com/dkorotych/lazybones-templates/maven-quickstart-template-1.3.2.zip .
 ```
 # Create an alias
 By creating an alias, you can use Lazybones in the same way as if you had installed everything on your computer.
@@ -36,7 +36,7 @@ alias lazybones='docker run \
                       --volume $PWD:/home/lazybones/app \
                       --workdir /home/lazybones/app \
                       --user $(id -u $(whoami)):$(id -g $(whoami)) \
-                      dkorotych/lazybones:0.8.3-jre7'
+                      dkorotych/lazybones:0.8.1-jre7'
 ```
 
 # Supported tags and respective Dockerfile links
