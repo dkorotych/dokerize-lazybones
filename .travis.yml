@@ -3,6 +3,8 @@ sudo: required
 services:
   - docker
 
+language: shell
+
 script:
   - readonly TAG='dkorotych/lazybones:travis'
   - docker build -t $TAG .
