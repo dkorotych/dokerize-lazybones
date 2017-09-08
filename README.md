@@ -20,11 +20,11 @@ allowing you to generate optional extras (controllers, scaffolding etc.) inside 
 You can run a Lazybones by using the Docker image directly, passing a Lazybones command to ```docker run```.
 For example, view list of standard project templates 
 ```docker
-docker run --rm dkorotych/lazybones list
+docker run --rm dkorotych/lazybones:0.8.3-jre8 list
 ```
 or create a [Maven] project
 ```docker
-docker run --rm --interactive --tty --volume $PWD:/home/lazybones/app dkorotych/lazybones create https://dl.bintray.com/dkorotych/lazybones-templates/maven-quickstart-template-1.3.2.zip .
+docker run --rm --interactive --tty --volume $PWD:/home/lazybones/app dkorotych/lazybones:0.8.3-jre8 create https://dl.bintray.com/dkorotych/lazybones-templates/maven-quickstart-template-1.3.2.zip .
 ```
 # Create an alias
 By creating an alias, you can use Lazybones in the same way as if you had installed everything on your computer.
@@ -36,7 +36,7 @@ alias lazybones='docker run \
                       --volume $PWD:/home/lazybones/app \
                       --workdir /home/lazybones/app \
                       --user $(id -u $(whoami)):$(id -g $(whoami)) \
-                      dkorotych/lazybones'
+                      dkorotych/lazybones:0.8.3-jre8'
 ```
 
 # Supported tags and respective Dockerfile links
