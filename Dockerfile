@@ -5,7 +5,7 @@ MAINTAINER Dmitry Korotych, dkorotych@gmail.com
 RUN apk add --no-cache curl bash zip unzip
 SHELL ["/bin/bash", "-c", "-l"]
 
-ENV LAZYBONES_VERSION 0.8.3
+ENV LAZYBONES_VERSION 0.8.2
 
 ENV GROUP_NAME lazybones
 ENV USER_NAME lazybones
