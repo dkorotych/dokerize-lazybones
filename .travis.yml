@@ -8,4 +8,4 @@ language: shell
 script:
   - readonly TAG='dkorotych/lazybones:travis'
   - docker build -t $TAG .
-  - docker run --rm $TAG help | grep 'LazyBOnes is a command-line based tool for creating basic software projects from templates.'
+  - docker run --rm $TAG help | grep 'Lazybones is a command-line based tool for creating basic software projects from templates.'
