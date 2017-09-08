@@ -3,6 +3,8 @@ Dockerized version of [Lazybones] project creation tool
 
 [![Build Status](https://travis-ci.org/dkorotych/dokerize-lazybones.svg?branch=master)](https://travis-ci.org/dkorotych/dokerize-lazybones)
 [![license](https://img.shields.io/github/license/dkorotych/dokerize-lazybones.svg)](https://github.com/dkorotych/dokerize-lazybones.git)
+[![Docker Automated build](https://img.shields.io/docker/automated/dkorotych/lazybones.svg)](https://hub.docker.com/r/dkorotych/lazybones)
+[![Docker Build Status](https://img.shields.io/docker/build/dkorotych/lazybones.svg)](https://hub.docker.com/r/dkorotych/lazybones)
 
 # What is [Lazybones]?
 Lazybones was born out of frustration that [Ratpack](https://ratpack.io)
