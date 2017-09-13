@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-alpine
 
-MAINTAINER Dmitry Korotych, dkorotych@gmail.com
+MAINTAINER Dmitry Korotych, dkorotych at gmail dot com
 
 RUN apk add --no-cache curl bash zip unzip
 SHELL ["/bin/bash", "-c", "-l"]
