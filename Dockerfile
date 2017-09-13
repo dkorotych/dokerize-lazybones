@@ -11,6 +11,7 @@ ENV GROUP_NAME lazybones
 ENV USER_NAME lazybones
 ENV USER_HOME /home/${USER_NAME}
 ENV APPLICATION_DIR ${USER_HOME}/app
+ENV LAZYBONES_DIR ${USER_HOME}/.lazybones
 
 RUN addgroup "${GROUP_NAME}" \
  && adduser -s /bin/bash -D -G "${GROUP_NAME}" "${USER_NAME}" \
@@ -28,8 +29,12 @@ RUN source "${USER_HOME}/.sdkman/bin/sdkman-init.sh" \
 
 COPY entrypoint.sh /
 ENV PATH ${USER_HOME}/.sdkman/candidates/lazybones/${LAZYBONES_VERSION}/bin:${PATH}
+
+RUN mkdir -p "${LAZYBONES_DIR}/templates" \
+ && chown -R "${GROUP_NAME}:${USER_NAME}" "${LAZYBONES_DIR}"
+
 WORKDIR ${APPLICATION_DIR}
-VOLUME ["${APPLICATION_DIR}", "${USER_HOME}/.lazybones"]
+VOLUME ["${APPLICATION_DIR}", "${LAZYBONES_DIR}"]
 
 USER root
 RUN chmod +x /entrypoint.sh
