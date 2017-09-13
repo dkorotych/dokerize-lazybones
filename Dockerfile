@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-alpine
 
-MAINTAINER Dmitry Korotych, dkorotych@gmail.com
+MAINTAINER Dmitry Korotych, dkorotych at gmail dot com
 
 RUN apk add --no-cache curl bash zip unzip
 SHELL ["/bin/bash", "-c", "-l"]
@@ -29,7 +29,7 @@ RUN source "${USER_HOME}/.sdkman/bin/sdkman-init.sh" \
 COPY entrypoint.sh /
 ENV PATH ${USER_HOME}/.sdkman/candidates/lazybones/${LAZYBONES_VERSION}/bin:${PATH}
 WORKDIR ${APPLICATION_DIR}
-VOLUME ["${APPLICATION_DIR}"]
+VOLUME ["${APPLICATION_DIR}", "${USER_HOME}/.lazybones"]
 
 USER root
 RUN chmod +x /entrypoint.sh
