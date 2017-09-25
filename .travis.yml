@@ -10,7 +10,7 @@ before_script:
   - chmod +x hooks/build
 
 script:
-  - readonly IMAGE_NAME='dkorotych/lazybones:travis'
+  - export IMAGE_NAME='dkorotych/lazybones:travis'
   - hooks/build
   - docker run --rm $IMAGE_NAME help | grep 'Lazybones is a command-line based tool for creating basic software projects from templates.'
   - .travis/test.sh
