@@ -3,6 +3,6 @@
 docker build \
     --build-arg BUILD_DATE="$(date --rfc-2822)" \
     --build-arg VCS_REF="$(git rev-parse --short HEAD)" \
-    --build-arg VCS_URL="$(git remote get-url origin)" \
+    --build-arg VCS_URL="$(git config --get remote.origin.url)" \
     --build-arg VERSION="$(git rev-parse --abbrev-ref HEAD)" \
     --tag ${IMAGE_NAME} .
