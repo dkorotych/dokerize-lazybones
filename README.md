@@ -24,19 +24,33 @@ docker run --rm dkorotych/lazybones:0.8.1-jre7 list
 ```
 or create a [Maven] project
 ```docker
-docker run --rm --interactive --tty --volume $PWD:/home/lazybones/app dkorotych/lazybones:0.8.1-jre7 create https://dl.bintray.com/dkorotych/lazybones-templates/maven-quickstart-template-1.3.2.zip .
+docker run --rm --interactive --tty --volume $PWD:/app dkorotych/lazybones:0.8.1-jre7 create https://dl.bintray.com/dkorotych/lazybones-templates/maven-quickstart-template-1.4.1.zip .
 ```
 # Create an alias
 By creating an alias, you can use Lazybones in the same way as if you had installed everything on your computer.
+
 ```bash
-alias lazybones='docker run \
-                      --rm \
-                      --interactive \
-                      --tty \
-                      --volume $PWD:/home/lazybones/app \
-                      --workdir /home/lazybones/app \
-                      --user $(id -u $(whoami)):$(id -g $(whoami)) \
-                      dkorotych/lazybones:0.8.1-jre7'
+function lazybones() {
+    mounts=""
+    for volume in "${HOME}/.lazybones" "${HOME}/.groovy" "${HOME}/.m2"
+    do
+        if [ ! -d "$volume" ]; then
+            mkdir -p $volume
+        fi
+        mounts="${mounts} --volume $volume:$volume"
+    done
+    docker run \
+        --rm \
+        --interactive \
+        --tty \
+        --tmpfs /tmp \
+        --volume /etc/group:/etc/group:ro \
+        --volume /etc/passwd:/etc/passwd:ro \
+        --user "$(id -u):$(id -g)" \
+        --volume "${PWD}":/app \
+        ${mounts} \
+    dkorotych/lazybones:0.8.1-jre7 $@
+}
 ```
 
 # Supported tags and respective Dockerfile links
