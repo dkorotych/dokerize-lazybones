@@ -35,7 +35,7 @@ function lazybones() {
     for volume in "${HOME}/.lazybones" "${HOME}/.groovy" "${HOME}/.m2"
     do
         if [ ! -d "$volume" ]; then
-            mkdir -p $volume
+            mkdir -p ${volume}
         fi
         mounts="${mounts} --volume $volume:$volume"
     done
