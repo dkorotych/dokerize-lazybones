@@ -1,6 +1,20 @@
 FROM openjdk:8-jre-alpine
 
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VCS_URL
+ARG VERSION
+
 MAINTAINER Dmitry Korotych, dkorotych at gmail dot com
+
+LABEL \
+    org.label-schema.build-date=$BUILD_DATE \
+    org.label-schema.vcs-ref=$VCS_REF \
+    org.label-schema.vcs-url=$VCS_URL \
+    org.label-schema.license="Apache-2.0" \
+    org.label-schema.vendor="Dmitry Korotych, dkorotych at gmail dot com" \
+    org.label-schema.version=$VERSION \
+    org.label-schema.schema-version="1.0"
 
 ENV LAZYBONES_VERSION 0.8.3
 

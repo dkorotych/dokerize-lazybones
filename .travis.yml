@@ -7,9 +7,10 @@ language: shell
 
 before_script:
   - chmod +x .travis/test.sh
+  - chmod +x hooks/build
 
 script:
-  - readonly TAG='dkorotych/lazybones:travis'
-  - docker build -t $TAG .
-  - docker run --rm $TAG help | grep 'Lazybones is a command-line based tool for creating basic software projects from templates.'
+  - readonly IMAGE_NAME='dkorotych/lazybones:travis'
+  - hooks/build
+  - docker run --rm $IMAGE_NAME help | grep 'Lazybones is a command-line based tool for creating basic software projects from templates.'
   - .travis/test.sh

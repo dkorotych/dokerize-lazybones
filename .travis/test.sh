@@ -22,7 +22,7 @@ function lazybones() {
         --user "$(id -u):$(id -g)" \
         --volume "${PWD}":/app \
         ${mounts} \
-    ${TAG} $@
+    ${IMAGE_NAME} $@
 }
 
 lazybones config add bintrayRepositories dkorotych/lazybones-templates
