@@ -41,13 +41,13 @@ function lazybones() {
     done
     docker run \
         --rm \
-	    --interactive \
-	    --tty \
+        --interactive \
+        --tty \
         --tmpfs /tmp \
         --volume /etc/group:/etc/group:ro \
         --volume /etc/passwd:/etc/passwd:ro \
         --user "$(id -u):$(id -g)" \
-	    --volume "${PWD}":/app \
+        --volume "${PWD}":/app \
         ${mounts} \
     dkorotych/lazybones $@
 }
