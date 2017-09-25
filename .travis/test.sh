@@ -14,8 +14,6 @@ function lazybones() {
     done
     docker run \
         --rm \
-        --interactive \
-        --tty \
         --tmpfs /tmp \
         --volume /etc/group:/etc/group:ro \
         --volume /etc/passwd:/etc/passwd:ro \
