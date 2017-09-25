@@ -5,10 +5,10 @@ Dockerized version of [Lazybones] project creation tool
 [![license](https://img.shields.io/github/license/dkorotych/dokerize-lazybones.svg)](https://github.com/dkorotych/dokerize-lazybones.git)
 [![Docker Automated build](https://img.shields.io/docker/automated/dkorotych/lazybones.svg)](https://hub.docker.com/r/dkorotych/lazybones)
 [![Docker Build Status](https://img.shields.io/docker/build/dkorotych/lazybones.svg)](https://hub.docker.com/r/dkorotych/lazybones)
-[![](https://images.microbadger.com/badges/image/dkorotych/lazybones.svg)](https://microbadger.com/images/dkorotych/lazybones "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/version/dkorotych/lazybones.svg)](https://microbadger.com/images/dkorotych/lazybones "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/commit/dkorotych/lazybones.svg)](https://microbadger.com/images/dkorotych/lazybones "Get your own commit badge on microbadger.com")
-[![](https://images.microbadger.com/badges/license/dkorotych/lazybones.svg)](https://microbadger.com/images/dkorotych/lazybones "Get your own license badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/dkorotych/lazybones:0.8.1-jre8.svg)](https://microbadger.com/images/dkorotych/lazybones:0.8.1-jre8 "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/dkorotych/lazybones:0.8.1-jre8.svg)](https://microbadger.com/images/dkorotych/lazybones:0.8.1-jre8 "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/commit/dkorotych/lazybones:0.8.1-jre8.svg)](https://microbadger.com/images/dkorotych/lazybones:0.8.1-jre8 "Get your own commit badge on microbadger.com")
+[![](https://images.microbadger.com/badges/license/dkorotych/lazybones:0.8.1-jre8.svg)](https://microbadger.com/images/dkorotych/lazybones:0.8.1-jre8 "Get your own license badge on microbadger.com")
 
 # What is [Lazybones]?
 Lazybones was born out of frustration that [Ratpack](https://ratpack.io) does not and will not have a command line tool
